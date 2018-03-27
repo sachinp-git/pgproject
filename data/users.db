@@ -1,0 +1,4 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"username","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}
+{"createdAt":1522141888019,"updatedAt":1522141888019,"id":1,"email":"sachin.reaper94@gmail.com","password":"$2a$04$gmtiJZxiYwUToVgwdR/7VOANkDxCGoiKvJy0NFFgphZmJC9zV4H..","timezone":"Asia/Kolkata","username":"sachinpandey1","full_name":"Sachin Pandey","_id":1}
