@@ -47,7 +47,7 @@ module.exports.routes = {
   '/api/signup': 'UserController.signup',
   '/api/login': 'UserController.login',
   '/api/bookappointment/':'BookingController.bookNewAppointment',
-  '/api/viewappointments':'BookingController.listAll',
+  '/api/getUserBookingDetails':'UserController.getUserBookingDetails',
   '/api/deletbooking':'BookingController.delete',
   '/api/getUserBookings':'BookingController.getUserBookings'
 

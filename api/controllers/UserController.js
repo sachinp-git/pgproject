@@ -6,6 +6,7 @@
  */
 const bcrypt=require('bcrypt');
 const saltRounds=2;
+
 module.exports = {
   async signup(req, res){
     if (_.any(['name', 'email', 'password'], attr => !req.body[attr] || req.body[attr].trim().length === 0 )) {
@@ -23,10 +24,40 @@ module.exports = {
         name: req.body.name,
         userName
       }
-      // TODO : save timezone based on user location.
+      
       await User.create(addData)
       .intercept('E_UNIQUE', 'emailAlreadyInUse');
       return res.json(200);
+    }catch(err){
+      return res.badRequest({error: err.message}, null, err);
+    }
+  },
+  async getUserBookingDetails(req, res){
+    if (_.any(['username'], attr => !req.body[attr] || req.body[attr].trim().length === 0 )) {
+      return res.badRequest({error: {message:'The provided fullName, password and/or email address are invalid.'},code:400});
+    }
+    try{
+      let searchData={
+        appointmentWith:req.body.username
+      }
+      const userAppointments = await Booking.find(searchData)
+      if(userAppointments.length<1){
+          return res.json({
+              bookedDates:[]
+          });
+      }
+      else{
+         let slots= userAppointments.map(slot=>{
+           return {
+            time:slot.time,
+            name:slot.appointmentSeeker
+           }
+         })
+         return res.json({
+           bookedDates:slots
+         });
+      }
+      
     }catch(err){
       return res.badRequest({error: err.message}, null, err);
     }
@@ -46,7 +77,8 @@ module.exports = {
       }
       else{
         if(bcrypt.compareSync(req.body.password,userDetails.password)){
-          return res.json(200);
+          delete userDetails.password
+          return res.json(userDetails);
         }
         else{
           return res.badRequest({error:{message:'The provided Password is invalid'},code:402})
