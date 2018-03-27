@@ -8,6 +8,7 @@
 
 module.exports = {  
   async getUserBookings(req,res){
+      console.log(req.body)
     if (_.any(['username'], attr => !req.body[attr] || req.body[attr].trim().length === 0 )) {
         return res.badRequest({error: {message:'Attributes Incomplete.'},code:400});
       }   

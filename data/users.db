@@ -2,3 +2,9 @@
 {"$$indexCreated":{"fieldName":"username","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"email","unique":true,"sparse":false}}
 {"createdAt":1522141888019,"updatedAt":1522141888019,"id":1,"email":"sachin.reaper94@gmail.com","password":"$2a$04$gmtiJZxiYwUToVgwdR/7VOANkDxCGoiKvJy0NFFgphZmJC9zV4H..","timezone":"Asia/Kolkata","username":"sachinpandey1","full_name":"Sachin Pandey","_id":1}
+{"email":"rahulp.rm7@gmail.com","password":"$2a$04$.LB4mz3rZjTbx0P8PQ5JY.xHAo7YVylXM6uNcMdoeTHA7Onnh48RC","createdAt":1522161958065,"updatedAt":1522161958065,"id":2,"timezone":"Asia/Kolkata","full_name":"Rahul Pandey","username":"RahulPandey1","_id":2}
+{"email":"sac@rgm.com","password":"$2a$04$glDX..RYLYZRtyU1hkiHtuceqz.WCMIUKRxqRUyjRl2OhQZXhjM9y","createdAt":1522162018915,"updatedAt":1522162018915,"id":3,"timezone":"Asia/Kolkata","full_name":"sac pan","username":"sacpan1","_id":3}
+{"email":"pac@man.com","password":"$2a$04$qmDR//nUgRLdOraOsFqKu.jwfvzuXjqQec5QFDCG4c/a.N20ZMviO","createdAt":1522162395887,"updatedAt":1522162395887,"id":7,"timezone":"Asia/Kolkata","full_name":"pac man","username":"pacman1","_id":7}
+{"email":"super@man.com","password":"$2a$04$pW639gzpnWJrfCTv4rgbkeIUAAZ5hdKlAX5B72JFrJU58bjbRqCEq","createdAt":1522162466855,"updatedAt":1522162466855,"id":8,"timezone":"Asia/Kolkata","full_name":"super man","username":"superman1","_id":8}
+{"email":"bat@man.com","password":"$2a$04$slk3WZMDX6uCkrUTCTeOf.mZuPQQWrvI2JvIkZxivJxKAailIPJBO","createdAt":1522162569983,"updatedAt":1522162569983,"id":9,"timezone":"Asia/Kolkata","full_name":"bat man","username":"batman1","_id":9}
+{"email":"iron@man.com","password":"$2a$04$nY4aa2LdlX3xj4pnWRV6K.OmsPQYJ.ZCxA5jCo5IQ244zGW/wB5da","createdAt":1522162676784,"updatedAt":1522162676784,"id":10,"timezone":"Asia/Kolkata","full_name":"iron man","username":"ironman1","_id":10}
