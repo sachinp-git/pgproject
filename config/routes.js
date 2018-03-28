@@ -43,13 +43,31 @@ module.exports.routes = {
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗
   //  ╠═╣╠═╝║  ║╣ ║║║ ║║╠═╝║ ║║║║║ ║ ╚═╗
   //  ╩ ╩╩  ╩  ╚═╝╝╚╝═╩╝╩  ╚═╝╩╝╚╝ ╩ ╚═╝
-
-  '/api/signup': 'UserController.signup',
-  '/api/login': 'UserController.login',
-  '/api/bookappointment/':'BookingController.bookNewAppointment',
-  '/api/getUserBookingDetails':'UserController.getUserBookingDetails',
-  '/api/deletbooking':'BookingController.delete',
-  '/api/getUserBookings':'BookingController.getUserBookings'
+  'POST /api/getUserBookings': {
+    controller: 'BookingController',
+    cors: true,
+    action:'getUserBookings'
+ },
+ 'POST /api/login': {
+  controller: 'UserController',
+  cors: true,
+  action:'login'
+},
+'POST /api/getUserBookingDetails': {
+  controller: 'UserController',
+  cors: true,
+  action:'getUserBookingDetails'
+},
+'POST /api/signup':{
+  controller: 'UserController',
+  cors: true,
+  action:'signup'
+},
+'POST /api/bookappointment':{
+  controller: 'BookingController',
+  cors: true,
+  action:'bookNewAppointment'
+}
 
   //  ╦ ╦╔═╗╔╗ ╦ ╦╔═╗╔═╗╦╔═╔═╗
   //  ║║║║╣ ╠╩╗╠═╣║ ║║ ║╠╩╗╚═╗
