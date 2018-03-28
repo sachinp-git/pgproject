@@ -14,7 +14,7 @@ module.exports = {
     }
     try{
       let search={
-        name:req.body.name.split(" ").join("")
+        name:req.body.name.split(" ").join("").toLowerCase()
       }
       const users = await User.find(search)
       let userName=search.name +(users.length+1)
